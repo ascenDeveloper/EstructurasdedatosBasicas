@@ -50,4 +50,14 @@ class MySinglyLinkedList {
             this.append(value, current.next)
         }
     }
+    prepend(value) {
+        const newNode = new Node(value);
+
+        newNode.next = thi.head;
+        this.head = newNode;
+
+        this._length++;
+
+        return this;
+    }
 }
