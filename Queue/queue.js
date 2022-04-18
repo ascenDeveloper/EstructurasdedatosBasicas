@@ -29,4 +29,18 @@ class Queue {
         return this;
 
     }
+
+    dequeue() {
+        if (this.length === 0) {
+            const msg = 'No hay elemento en su Queue';
+            return msg;
+        } else if (this.length === 1) {
+            this.first = null;
+            this.last = null;
+        } else {
+            this.first = this.first.next;
+        }
+        this.length--;
+        return this;
+    }
 }
